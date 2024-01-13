@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<directory xmlns="http://www.eclipse.org/mylyn/discovery/directory/">
+<entry url="https://download.jboss.org/jbosstools/photon/staging/updates/discovery.central/4.29.0.Final/plugins/org.jboss.tools.central.discovery_4.28.0.Final-v20231026-1542-B1618.jar" permitCategories="true"/>
+</directory>

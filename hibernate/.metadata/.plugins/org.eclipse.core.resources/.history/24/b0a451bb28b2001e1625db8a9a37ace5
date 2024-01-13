@@ -1,0 +1,5 @@
+package hibernate.hibernate;
+
+public class HibernateEnterprise {
+
+}

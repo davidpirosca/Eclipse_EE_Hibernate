@@ -1,0 +1,5 @@
+Cambiar la Ruta del Conector
+
+Window > Preference > Data Management > Connectivity > Driver Definitions
+MySQL JDBC DriverEmpresa > Edit > JAR List > Seleccionar Archivo > Edit JAR/ZIP
+
