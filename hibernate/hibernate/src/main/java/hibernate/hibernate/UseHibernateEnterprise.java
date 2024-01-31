@@ -2,6 +2,9 @@ package hibernate.hibernate;
 
 import java.util.logging.Level;
 import java.util.logging.LogManager;
+import com.mysql.cj.Session;
+import jakarta.transaction.Transaction;
+import java.util.*;
 
 public class UseHibernateEnterprise {
 
@@ -17,10 +20,31 @@ public class UseHibernateEnterprise {
 //		h.findProductById(3);
 //		System.out.println("");
 //		h.deleteProductById(7);
-		h.showProducts();
+//		h.showProducts();
 //		System.out.println("");
 //		h.updateProductById(5,"ssd",105);
 //		h.updateProductById(8,"ssd",155);
 //		h.close();
+		
+		
+		//HQL
+		System.out.println("***************************************************************");
+		System.out.println("Mostrar Productos");
+		System.out.println("***************************************************************");
+		System.out.println("\n");
+		
+		h.mostrarProductos();
+		
+		System.out.println("***************************************************************");
+		System.out.println("Mostrar Todos Los Productos = Texto");
+		System.out.println("***************************************************************");
+		System.out.println("\n");
+		
+		h.mostrarPorNombre("monitor");
+		
+		System.out.println("***************************************************************");
+		System.out.println("Mostrar Todos Los Productos = Texto");
+		System.out.println("***************************************************************");
+		System.out.println("\n");
 	}
 }

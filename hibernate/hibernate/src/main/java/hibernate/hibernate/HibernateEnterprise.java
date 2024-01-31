@@ -193,4 +193,60 @@ public class HibernateEnterprise {
 			session.close();
 		}
 	}
+	
+	
+	/* *****************************************HQL******************************************** */
+	
+	public void mostrarProductos() {
+		Session session = sf.openSession();
+		Transaction tx = null;
+		try {
+			tx = session.beginTransaction();
+			List allproducts = session.createQuery("FROM Productos").list();
+			Iterator it = allproducts.iterator();
+			while (it.hasNext()) {
+				// for (Iterator iterator = allproducts.iterator(); iterator.hasNext();){
+				Productos p = (Productos) it.next();
+				System.out.print("Id: " + p.getId());
+				System.out.print(" ,Name: " + p.getNombre());
+				System.out.println(" ,Price: " + p.getPrecio());
+			}
+			tx.commit();
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+	}
+	
+	public void mostrarPorNombre(String texto) {
+	    Session session = sf.openSession();
+	    Transaction tx = null;
+
+	    try {
+	        tx = session.beginTransaction();
+	        List allProductNames = session.createQuery("FROM Productos p WHERE p.nombre LIKE :texto").setParameter("texto", "%" + texto + "%").list();
+	        Iterator it = allProductNames.iterator();
+	        while (it.hasNext()) {
+				// for (Iterator iterator = allproducts.iterator(); iterator.hasNext();){
+				Productos p = (Productos) it.next();
+				System.out.print("Id: " + p.getId());
+				System.out.print(" ,Name: " + p.getNombre());
+				System.out.println(" ,Price: " + p.getPrecio());
+			}
+	        tx.commit();
+	    } catch (HibernateException e) {
+	        if (tx != null)
+	            tx.rollback();
+	        e.printStackTrace();
+	    } finally {
+	        session.close();
+	    }
+	}
+	
+	public void productosOrdenadosPorPrecio() {
+		
+	}
 }

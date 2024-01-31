@@ -1,0 +1,9 @@
+package hibernate.hibernate;
+
+import com.mysql.cj.Session;
+
+import jakarta.transaction.Transaction;
+
+public class MostrarProductos {
+	
+}
