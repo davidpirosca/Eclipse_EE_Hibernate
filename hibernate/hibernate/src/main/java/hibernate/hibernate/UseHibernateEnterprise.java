@@ -12,6 +12,8 @@ public class UseHibernateEnterprise {
 		LogManager.getLogManager().getLogger("").setLevel(Level.SEVERE);
 
 		HibernateEnterprise h = new HibernateEnterprise();
+		
+		//SQL
 //		System.out.println("");
 //		h.addProduct("monitor",170);
 //		System.out.println("");
@@ -27,24 +29,96 @@ public class UseHibernateEnterprise {
 //		h.close();
 		
 		
-		//HQL
-		System.out.println("***************************************************************");
-		System.out.println("Mostrar Productos");
-		System.out.println("***************************************************************");
-		System.out.println("\n");
+		//HQL Practica 3.3
+//		System.out.println("***************************************************************");
+//		System.out.println("Mostrar Todos Los Productos");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.mostrarProductos();
+//		
+//		System.out.println("");
+//		System.out.println("***************************************************************");
+//		System.out.println("Mostrar Todos Los Productos = Texto");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.mostrarPorNombre("monitor");
+//		
+//		System.out.println("");
+//		System.out.println("***************************************************************");
+//		System.out.println("Mostrar Todos Los Productos Ordenados Por Precio");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.productosOrdenadosPorPrecio();
+//		
+//		System.out.println("");
+//		System.out.println("***************************************************************");
+//		System.out.println("Muestra El Precio De Todo Los Productos Que Tienen Ese Nombre");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.precioDe("monitor");
+//		
+//		System.out.println("");
+//		System.out.println("***************************************************************");
+//		System.out.println("Usando uniqueResult, Buscar el Producto con Id");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.buscaProducto(1);
 		
-		h.mostrarProductos();
 		
-		System.out.println("***************************************************************");
-		System.out.println("Mostrar Todos Los Productos = Texto");
-		System.out.println("***************************************************************");
-		System.out.println("\n");
+		//HQL Practica 3.1
 		
-		h.mostrarPorNombre("monitor");
-		
-		System.out.println("***************************************************************");
-		System.out.println("Mostrar Todos Los Productos = Texto");
-		System.out.println("***************************************************************");
-		System.out.println("\n");
+//		System.out.println("***************************************************************");
+//		System.out.println("Mostrar Todos los Clientes");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.mostrarClientes();
+//		
+//		System.out.println("***************************************************************");
+//		System.out.println("Añadir Cliente con Informacion en Argumentos");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.agregarCliente("David","España");
+//		
+//		System.out.println("***************************************************************");
+//		System.out.println("Borrar Cliente por el Id");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.borrarClientePorId(5);
+//		
+//		System.out.println("***************************************************************");
+//		System.out.println("Actualizar Cliente por Id");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.actualizarCliente(4);
+//		
+//		System.out.println("***************************************************************");
+//		System.out.println("Borrar Cliente por Nombre");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.borrarClientePorNombre("David");
+//		
+//		System.out.println("***************************************************************");
+//		System.out.println("Numero de Clientes en El Pais y Sus Datos");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.mostrarPorPais("españa");
+//		
+//		System.out.println("***************************************************************");
+//		System.out.println("Muestra el País del Nombre");
+//		System.out.println("***************************************************************");
+//		System.out.println("\n");
+//		
+//		h.buscarPaisDe("pepe");
 	}
 }

@@ -1,0 +1,73 @@
+package hibernate.hibernate;
+
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import com.mysql.cj.Session;
+import jakarta.transaction.Transaction;
+import java.util.*;
+
+public class UseHibernateEnterprise {
+
+	public static void main(String[] args) {
+		LogManager.getLogManager().getLogger("").setLevel(Level.SEVERE);
+
+		HibernateEnterprise h = new HibernateEnterprise();
+		
+		//SQL
+//		System.out.println("");
+//		h.addProduct("monitor",170);
+//		System.out.println("");
+//		h.showProducts();
+//		System.out.println("");
+//		h.findProductById(3);
+//		System.out.println("");
+//		h.deleteProductById(7);
+//		h.showProducts();
+//		System.out.println("");
+//		h.updateProductById(5,"ssd",105);
+//		h.updateProductById(8,"ssd",155);
+//		h.close();
+		
+		
+		//HQL Practica 3.3
+		System.out.println("***************************************************************");
+		System.out.println("Mostrar Productos");
+		System.out.println("***************************************************************");
+		System.out.println("\n");
+		
+		h.mostrarProductos();
+		
+		System.out.println("");
+		System.out.println("***************************************************************");
+		System.out.println("Mostrar Todos Los Productos = Texto");
+		System.out.println("***************************************************************");
+		System.out.println("\n");
+		
+		h.mostrarPorNombre("monitor");
+		
+		System.out.println("");
+		System.out.println("***************************************************************");
+		System.out.println("Mostrar Todos Los Productos Ordenados Por Precio");
+		System.out.println("***************************************************************");
+		System.out.println("\n");
+		
+		h.productosOrdenadosPorPrecio();
+		
+		System.out.println("");
+		System.out.println("***************************************************************");
+		System.out.println("Muestra El Precio De Todo Los Productos Que Tienen Ese Nombre");
+		System.out.println("***************************************************************");
+		System.out.println("\n");
+		
+		h.precioDe("monitor");
+		
+		System.out.println("");
+		System.out.println("***************************************************************");
+		System.out.println("Usando uniqueResult, Buscar el Producto con Id");
+		System.out.println("***************************************************************");
+		System.out.println("\n");
+		
+		h.buscaProducto(1);
+		
+	}
+}
